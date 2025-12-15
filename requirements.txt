@@ -1,1 +1,82 @@
 # Graphcast interpretability - runtime requirements
+# =========================
+# Core numerical stack
+# =========================
+numpy==2.3.2
+scipy==1.16.1
+ml_dtypes==0.5.3
+opt_einsum==3.4.0
+sympy==1.13.1
+
+# =========================
+# JAX / GraphCast stack
+# =========================
+jax==0.7.0
+jaxlib==0.7.0
+dm-haiku==0.0.14
+dm-tree==0.1.9
+chex==0.1.90
+jmp==0.0.4
+jraph==0.0.6.dev0
+tree-math==0.2.1
+tensorstore==0.1.76
+dinosaur-dycore==1.2.1
+
+# =========================
+# GraphCast (your fork, pinned)
+# =========================
+graphcast @ git+ssh://git@github.com/theodoremacmillan/graphcast.git@<FULL_COMMIT_HASH>
+
+# =========================
+# Data / ERA5 / array IO
+# =========================
+xarray==2025.8.0
+zarr==3.1.2
+numcodecs==0.16.2
+pandas==2.3.2
+python-dateutil==2.9.0.post0
+pytz==2025.2
+tzdata==2025.2
+
+# =========================
+# Visualization / geospatial
+# =========================
+matplotlib==3.10.5
+Cartopy==0.25.0
+pyproj==3.7.2
+shapely==2.1.1
+pyshp==2.3.1
+rtree==1.4.1
+pillow==11.3.0
+contourpy==1.3.3
+cycler==0.12.1
+fonttools==4.59.1
+kiwisolver==1.4.9
+
+# =========================
+# Scientific utilities
+# =========================
+networkx==3.5
+scikit-learn==1.7.1
+joblib==1.5.1
+threadpoolctl==3.6.0
+numba==0.62.1
+llvmlite==0.45.1
+pynndescent==0.5.13
+umap-learn==0.5.9.post2
+astropy==7.1.1
+astropy-iers-data==0.2025.11.3.0.38.37
+pyerfa==2.0.1.5
+pyshtools==4.12.2
+trimesh==4.7.4
+
+# =========================
+# IO / misc utilities
+# =========================
+tqdm==4.67.1
+PyYAML==6.0.2
+requests==2.32.5
+urllib3==2.5.0
+packaging==25.0
+six==1.17.0
+typing_extensions==4.15.0
