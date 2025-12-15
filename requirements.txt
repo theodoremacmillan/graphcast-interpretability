@@ -1,16 +1,15 @@
-# Graphcast interpretability - runtime requirements
-# =========================
-# Core numerical stack
-# =========================
+# -----------------------------------------------------------------------------
+# Core numerical / scientific stack
+# -----------------------------------------------------------------------------
 numpy==2.3.2
 scipy==1.16.1
 ml_dtypes==0.5.3
 opt_einsum==3.4.0
 sympy==1.13.1
 
-# =========================
-# JAX / GraphCast stack
-# =========================
+# -----------------------------------------------------------------------------
+# JAX / GraphCast stack (CPU by default)
+# -----------------------------------------------------------------------------
 jax==0.7.0
 jaxlib==0.7.0
 dm-haiku==0.0.14
@@ -22,14 +21,12 @@ tree-math==0.2.1
 tensorstore==0.1.76
 dinosaur-dycore==1.2.1
 
-# =========================
-# GraphCast (your fork, pinned)
-# =========================
-graphcast @ git+ssh://git@github.com/theodoremacmillan/graphcast.git@<FULL_COMMIT_HASH>
+# GraphCast fork
+graphcast @ git+ssh://git@github.com/theodoremacmillan/graphcast.git@423554fe102cc602b634701a1849c6f5b7bedead
 
-# =========================
-# Data / ERA5 / array IO
-# =========================
+# -----------------------------------------------------------------------------
+# Data / ERA5 I/O
+# -----------------------------------------------------------------------------
 xarray==2025.8.0
 zarr==3.1.2
 numcodecs==0.16.2
@@ -38,24 +35,36 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 tzdata==2025.2
 
-# =========================
-# Visualization / geospatial
-# =========================
-matplotlib==3.10.5
+# -----------------------------------------------------------------------------
+# Visualization / geospatial (REQUIRES SYSTEM LIBS)
+#
+# NOTE:
+# These packages require PROJ, GEOS, and libtiff to be available at install time.
+# On HPC systems, install them using binary-only wheels AFTER loading modules:
+#
+#   pip install --only-binary=cartopy,pyproj,shapely Cartopy pyproj shapely
+#
+# They are listed here for completeness and version pinning.
+# -----------------------------------------------------------------------------
 Cartopy==0.25.0
 pyproj==3.7.2
 shapely==2.1.1
 pyshp==2.3.1
 rtree==1.4.1
-pillow==11.3.0
+
+# -----------------------------------------------------------------------------
+# Plotting / visualization utilities
+# -----------------------------------------------------------------------------
+matplotlib==3.10.5
 contourpy==1.3.3
 cycler==0.12.1
 fonttools==4.59.1
 kiwisolver==1.4.9
+pillow==11.3.0
 
-# =========================
-# Scientific utilities
-# =========================
+# -----------------------------------------------------------------------------
+# Scientific / ML utilities
+# -----------------------------------------------------------------------------
 networkx==3.5
 scikit-learn==1.7.1
 joblib==1.5.1
@@ -64,15 +73,19 @@ numba==0.62.1
 llvmlite==0.45.1
 pynndescent==0.5.13
 umap-learn==0.5.9.post2
+
+# -----------------------------------------------------------------------------
+# Earth / spherical geometry
+# -----------------------------------------------------------------------------
 astropy==7.1.1
 astropy-iers-data==0.2025.11.3.0.38.37
 pyerfa==2.0.1.5
 pyshtools==4.12.2
 trimesh==4.7.4
 
-# =========================
-# IO / misc utilities
-# =========================
+# -----------------------------------------------------------------------------
+# Misc utilities
+# -----------------------------------------------------------------------------
 tqdm==4.67.1
 PyYAML==6.0.2
 requests==2.32.5
