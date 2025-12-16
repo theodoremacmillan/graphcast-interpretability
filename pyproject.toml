@@ -12,8 +12,7 @@ requires-python = ">=3.9"
 dependencies = [
     "numpy",
     "xarray",
-    "jax",
-    "haiku",
+    "jax"
 ]
 
 [tool.setuptools.packages.find]
