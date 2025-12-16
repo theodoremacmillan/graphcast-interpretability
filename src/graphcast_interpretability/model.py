@@ -4,6 +4,7 @@ import math
 import numpy as np
 import torch
 from torch.utils.data import IterableDataset, DataLoader
+from dataclasses import dataclass
 
 import os
 import glob
