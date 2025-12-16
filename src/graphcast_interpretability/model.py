@@ -229,14 +229,6 @@ import numpy as np
 from typing import Tuple
 import sys, os
 
-@dataclass
-class SAEStaticParams:
-    enc_w: jnp.ndarray      # [d_in, latent]
-    dec_w: jnp.ndarray      # [latent, d_in]
-    b_pre: jnp.ndarray      # [d_in]
-    k_active: int
-    unit_norm_decoder: bool
-
 def load_sae_params_from_torch(ckpt_path: str, unit_norm_decoder: bool, k_active: int):
     import torch, jax.numpy as jnp
     from dataclasses import dataclass
