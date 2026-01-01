@@ -3,7 +3,7 @@
 This repository contains code and utilities accompanying the paper:
 
 > **MacMillan, T. & Ouellette, N. T. (2025)**  
-> *Mechanistic interpretability in a deep-learning physics model*  
+> *[Towards mechanistic understanding in a data-driven weather model: internal activations reveal interpretable physical features](https://arxiv.org/abs/2512.24440)
 > *(submitted / under review)*
 
 The focus of this codebase is **mechanistic interpretability of DeepMind’s GraphCast weather model**, using sparse autoencoders (SAEs) to identify physically meaningful features in intermediate GraphCast representations.
